@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course webpage for Econometrics I (Part II): Econometrics and Causal Inference at FGV EPGE, 2026, taught by Valdemar Pinho Neto.">
+  <title>Econometrics I (Part II): Econometrics and Causal Inference - FGV EPGE 2026</title>
+
+  <!-- Text is set in Arial. Arimo (metric-compatible with Arial) downloads only as a
+       fallback where Arial is not installed; Fira Mono is the code font. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Fira+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="container">
+    <a href="#main-heading" class="skip-link visually-hidden">Skip to main content</a>
+
+    <div class="hero">
+      <h1 id="main-heading" tabindex="-1">Econometrics and Causal Inference</h1>
+      <p class="sub"><strong>Valdemar Pinho Neto</strong> · Econometrics I (Part II) · <span class="fgv">FGV EPGE</span> · 2026</p>
+    </div>
+
+    <nav class="navlinks" aria-label="Course resources">
+      <a href="syllabus/Syllabus_Econometrics_and_Causal_Inference_EPGE_2026.pdf" class="pill">Syllabus (PDF)</a>
+      <a href="notes/Econometrics_and_Causal_Inference.pdf" class="pill">Lecture Notes (PDF)</a>
+      <a href="#problem-sets" class="pill">Problem Sets</a>
+      <a href="https://epge-classes.github.io/econometrics-fgv-2026/" class="pill">Part I Website</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <dl class="course-meta">
+      <div class="meta-item">
+        <dt>Instructor</dt>
+        <dd><a href="https://sites.google.com/view/valdemarneto/home">Valdemar Pinho Neto</a> (<a href="mailto:valdemar.pinho@fgv.br">valdemar.pinho@fgv.br</a>)</dd>
+      </div>
+      <div class="meta-item">
+        <dt>TA</dt>
+        <dd>Taric Latif (<a href="mailto:tariclatif@gmail.com">tariclatif@gmail.com</a>)</dd>
+      </div>
+      <div class="meta-item">
+        <dt>Classes</dt>
+        <dd>Wednesdays &amp; Fridays, 9:00–11:00 (10 sessions · 20h)</dd>
+      </div>
+      <div class="meta-item">
+        <dt>Grading (Part II)</dt>
+        <dd>Exam 80% · Problem-set quiz 10% · Group empirical exercise 10%</dd>
+      </div>
+    </dl>
+
+    <section>
+      <h2 id="lecture-notes-heading">Lecture Notes</h2>
+
+      <div class="lectures">
+        <ul role="list">
+          <li>
+            <span class="num">01</span>
+            <span class="item-body">
+              <span class="ttl">Potential Outcomes, Causal Estimands, and Identification</span>
+              <span class="hours">2.5h</span>
+              <span class="desc">Potential outcomes, ATE and ATT, selection bias, treatment-effect heterogeneity, bad controls</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=17" class="pill">Chapter<span class="visually-hidden"> 1: Potential Outcomes, Causal Estimands, and Identification (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <span class="item-body">
+              <span class="ttl">Randomized Experiments and Selection on Observables</span>
+              <span class="hours">2.5h</span>
+              <span class="desc">Randomization, inference and balance, regression adjustment, propensity score, IPW, AIPW, and matching</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=28" class="pill">Chapter<span class="visually-hidden"> 2: Randomized Experiments and Selection on Observables (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <span class="item-body">
+              <span class="ttl">Instrumental Variables and Local Average Treatment Effects</span>
+              <span class="hours">3.0h</span>
+              <span class="desc">Instrument validity, first stage, Wald and 2SLS, principal strata and LATE, weak instruments</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=40" class="pill">Chapter<span class="visually-hidden"> 3: Instrumental Variables and Local Average Treatment Effects (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <span class="item-body">
+              <span class="ttl">Regression Discontinuity Designs</span>
+              <span class="hours">2.5h</span>
+              <span class="desc">Sharp and fuzzy RD, local polynomial estimation, bandwidth choice, bias correction, manipulation diagnostics</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=50" class="pill">Chapter<span class="visually-hidden"> 4: Regression Discontinuity Designs (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <span class="item-body">
+              <span class="ttl">Difference-in-Differences: Foundations</span>
+              <span class="hours">2.0h</span>
+              <span class="desc">Canonical 2×2 DiD, parallel trends, event studies, inference and serial correlation</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=60" class="pill">Chapter<span class="visually-hidden"> 5: Difference-in-Differences: Foundations (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <span class="item-body">
+              <span class="ttl">Modern Difference-in-Differences and Event Studies</span>
+              <span class="hours">3.0h</span>
+              <span class="desc">Staggered adoption, TWFE limitations, Goodman–Bacon decomposition, group-time ATT, modern event studies</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=69" class="pill">Chapter<span class="visually-hidden"> 6: Modern Difference-in-Differences and Event Studies (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">07</span>
+            <span class="item-body">
+              <span class="ttl">Synthetic Control and Comparative Case Studies</span>
+              <span class="hours">2.0h</span>
+              <span class="desc">Synthetic control construction, donor pool, pre-treatment fit, placebos, extensions and links to DiD</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=81" class="pill">Chapter<span class="visually-hidden"> 7: Synthetic Control and Comparative Case Studies (PDF)</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">08</span>
+            <span class="item-body">
+              <span class="ttl">Diagnostics, Sensitivity Analysis, Robustness, and Research Design</span>
+              <span class="hours">2.5h</span>
+              <span class="desc">Identification robustness, placebos, sensitivity analysis, cluster-robust inference, external validity, design audit</span>
+            </span>
+            <span class="links">
+              <a href="notes/Econometrics_and_Causal_Inference.pdf#page=91" class="pill">Chapter<span class="visually-hidden"> 8: Diagnostics, Sensitivity Analysis, Robustness, and Research Design (PDF)</span></a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pdfnote">
+        <p><strong>Complete monograph:</strong> <cite>Econometrics and Causal Inference</cite> (Pinho Neto, 2026) — <a href="notes/Econometrics_and_Causal_Inference.pdf">Lecture Notes (PDF)</a>, including the <a href="notes/Econometrics_and_Causal_Inference.pdf#page=14">Notation Guide</a>, <a href="notes/Econometrics_and_Causal_Inference.pdf#page=103">Appendix A (Mathematical Appendix)</a>, and <a href="notes/Econometrics_and_Causal_Inference.pdf#page=109">Appendix B (Empirical Implementation &amp; Reproducibility)</a>.</p>
+      </div>
+    </section>
+
+    <section id="problem-sets">
+      <h2 id="problem-sets-heading">Problem Sets</h2>
+
+      <!-- To release an upcoming problem set, replace its <span class="soon">coming soon</span>
+           with the <span class="links">...</span> block from PS1 or PS2. -->
+      <div class="lectures">
+        <ul role="list">
+          <li>
+            <span class="num">01</span>
+            <span class="item-body">
+              <span class="ttl">Potential Outcomes, Causal Estimands, and Identification</span>
+            </span>
+            <span class="links">
+              <a href="problem_sets/PS1/problem_set_01.pdf" class="pill">PDF<span class="visually-hidden"> — Problem Set 1</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <span class="item-body">
+              <span class="ttl">Randomized Experiments and Selection on Observables</span>
+            </span>
+            <span class="links">
+              <a href="problem_sets/PS2/problem_set_02.pdf" class="pill">PDF<span class="visually-hidden"> — Problem Set 2</span></a>
+              <a href="problem_sets/PS2/job_training.csv" class="pill" download>Data (CSV)<span class="visually-hidden"> — job_training.csv for Problem Set 2</span></a>
+            </span>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <span class="item-body">
+              <span class="ttl">Instrumental Variables and Local Average Treatment Effects</span>
+            </span>
+            <span class="soon">coming soon</span>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <span class="item-body">
+              <span class="ttl">Regression Discontinuity Designs</span>
+            </span>
+            <span class="soon">coming soon</span>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <span class="item-body">
+              <span class="ttl">Difference-in-Differences: Foundations</span>
+            </span>
+            <span class="soon">coming soon</span>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <span class="item-body">
+              <span class="ttl">Modern Difference-in-Differences and Event Studies</span>
+            </span>
+            <span class="soon">coming soon</span>
+          </li>
+          <li>
+            <span class="num">07</span>
+            <span class="item-body">
+              <span class="ttl">Synthetic Control and Comparative Case Studies</span>
+            </span>
+            <span class="soon">coming soon</span>
+          </li>
+          <li>
+            <span class="num">08</span>
+            <span class="item-body">
+              <span class="ttl">Diagnostics, Sensitivity Analysis, Robustness, and Research Design</span>
+            </span>
+            <span class="soon">coming soon</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pdfnote">
+        <p>Numbered references to tables, figures, equations, and sections in the problem sets refer to the <a href="notes/Econometrics_and_Causal_Inference.pdf">Lecture Notes (PDF)</a>.</p>
+      </div>
+
+      <details class="codebook">
+        <summary>Dataset codebook: <code>job_training.csv</code> (Problem Set 2, Problem 6)</summary>
+        <div class="codebook-content">
+          <p>2,935 workers: 185 program participants (<code>sample = program</code>), 260 experimental controls (<code>experimental_control</code>), and 2,490 survey respondents (<code>survey</code>). Comma-separated with header row.</p>
+          <table>
+            <caption>Variables in <code>job_training.csv</code></caption>
+            <thead>
+              <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>id</code></td>
+                <td>Worker identifier</td>
+              </tr>
+              <tr>
+                <td><code>sample</code></td>
+                <td><code>program</code>, <code>experimental_control</code>, or <code>survey</code></td>
+              </tr>
+              <tr>
+                <td><code>treat</code></td>
+                <td>1 if the worker participated in the program; 0 otherwise</td>
+              </tr>
+              <tr>
+                <td><code>age</code></td>
+                <td>Age in years</td>
+              </tr>
+              <tr>
+                <td><code>educ</code></td>
+                <td>Years of schooling</td>
+              </tr>
+              <tr>
+                <td><code>black</code>, <code>hisp</code></td>
+                <td>1 if Black; 1 if Hispanic</td>
+              </tr>
+              <tr>
+                <td><code>married</code></td>
+                <td>1 if married</td>
+              </tr>
+              <tr>
+                <td><code>nodegree</code></td>
+                <td>1 if no high-school degree</td>
+              </tr>
+              <tr>
+                <td><code>re74</code>, <code>re75</code></td>
+                <td>Pre-program earnings in 1974 and 1975 (US dollars)</td>
+              </tr>
+              <tr>
+                <td><code>re78</code></td>
+                <td>Post-program earnings in 1978 (US dollars, outcome variable)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2 id="references-heading">Core References</h2>
+      <ul class="refs-list">
+        <li>Pinho Neto, V. R. (2026). <cite>Econometrics and Causal Inference</cite>. Graduate Lecture Notes, FGV EPGE (<a href="notes/Econometrics_and_Causal_Inference.pdf">Lecture Notes (PDF)</a>).</li>
+        <li>Angrist, J. D., &amp; Pischke, J.-S. (2009). <cite>Mostly Harmless Econometrics: An Empiricist’s Companion</cite>. Princeton University Press.</li>
+        <li>Imbens, G. W., &amp; Rubin, D. B. (2015). <cite>Causal Inference for Statistics, Social, and Biomedical Sciences</cite>. Cambridge University Press.</li>
+        <li>Cunningham, S. (2021). <cite>Causal Inference: The Mixtape</cite>. Yale University Press.</li>
+        <li>Hernán, M. A., &amp; Robins, J. M. (2020). <cite>Causal Inference: What If</cite>. Chapman &amp; Hall/CRC.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer-note">
+    <p>Materials licensed under <a href="LICENSE">CC BY 4.0</a>. Graduate Program in Economics (M.Sc. &amp; Ph.D.), <span lang="pt-BR">FGV EPGE — Escola Brasileira de Economia e Finanças</span>.</p>
+  </footer>
+</body>
+</html>

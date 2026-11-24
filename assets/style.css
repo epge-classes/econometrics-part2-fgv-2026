@@ -1,0 +1,442 @@
+/* Econometrics I (Part II): Econometrics and Causal Inference — FGV EPGE 2026
+   Visual palette and components aligned with Part I (_theme/landing.scss). */
+
+:root {
+  --fgv-blue: #0072BC;
+  --fgv-blue-tint: rgba(0, 114, 188, 0.06);
+  --fgv-blue-row: rgba(0, 114, 188, 0.035);
+  --slate: #2D3E50;
+  --body-color: #1A1A1A;
+  --sub-color: #4A4A4A;
+  --note-color: #595959;
+  --muted: #636E7B;
+  --rule: #D8DEE5;
+  --fill: #F2F5F8;
+  --bg: #FFFFFF;
+  --font-sans: Arial, Arimo, "Helvetica Neue", Helvetica, sans-serif;
+  --font-mono: "Fira Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--body-color);
+  background-color: var(--bg);
+}
+
+.container {
+  inline-size: 100%;
+  max-inline-size: 53rem; /* ~848px, matching Part I's Quarto article column */
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ---------- Accessibility utilities ---------- */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  inline-size: 1px !important;
+  block-size: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.skip-link:is(:focus, :focus-visible, :active) {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 1000;
+  padding: 0.5rem 0.9rem;
+  background: var(--slate);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  text-decoration: none;
+}
+
+:where(a:any-link, summary):focus-visible {
+  outline: 3px solid var(--fgv-blue);
+  outline-offset: 3px;
+}
+
+h1:focus {
+  outline: none;
+}
+
+a {
+  color: var(--fgv-blue);
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: #00558C;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--fill);
+  padding: 0.12em 0.35em;
+  border-radius: 0.25rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  border-block-end: 3px solid var(--fgv-blue);
+  padding-block-end: 0.9rem;
+  margin-block: 1.75rem 1.2rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.65rem, 1.3rem + 1.5vw, 2.1rem);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--slate);
+  margin: 0;
+}
+
+.hero .sub {
+  color: var(--sub-color);
+  font-size: 1.05rem;
+  margin: 0.35rem 0 0 0;
+}
+
+.hero .fgv {
+  color: var(--fgv-blue);
+  font-weight: 600;
+}
+
+/* ---------- Pill links (same look as Part I .pill) ---------- */
+.navlinks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: balance;
+  gap: 0.45rem;
+  margin-block-end: 1.5rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: safe center;
+  justify-content: center;
+  min-block-size: 1.65rem;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding-block: 0.42em;
+  padding-inline: 0.82em;
+  border: 1.5px solid var(--fgv-blue);
+  border-radius: 999px;
+  color: var(--fgv-blue);
+  background: var(--fgv-blue-tint);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.pill:hover {
+  background: var(--fgv-blue);
+  color: #FFFFFF;
+}
+
+@media (pointer: coarse) {
+  .pill {
+    min-block-size: 2.25rem;
+    padding-block: 0.55em;
+    padding-inline: 0.95em;
+  }
+}
+
+/* ---------- Course metadata strip ---------- */
+.course-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0.55rem 1.5rem;
+  margin-block: 0 2rem;
+  padding-block: 0.85rem;
+  padding-inline: 1rem;
+  background: var(--fill);
+  border: 1px solid var(--rule);
+  border-inline-start: 3.5px solid var(--slate);
+  border-radius: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.course-meta .meta-item {
+  min-inline-size: 0;
+}
+
+.course-meta dt {
+  display: inline;
+  font-weight: 600;
+  color: var(--slate);
+}
+
+.course-meta dt::after {
+  content: ": ";
+}
+
+.course-meta dd {
+  display: inline;
+  margin: 0;
+  color: var(--body-color);
+}
+
+/* ---------- Section headings ---------- */
+h2 {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--slate);
+  margin-block: 2rem 0.85rem;
+  border-block-end: none;
+  padding-block-end: 0;
+}
+
+/* ---------- Item lists (Lectures / Chapters & Problem Sets) ---------- */
+.lectures {
+  container: item-list / inline-size;
+}
+
+.lectures ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-block-start: 1.6px solid var(--slate);
+  border-block-end: 1.6px solid var(--slate);
+}
+
+.lectures li {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding-block: 0.6rem;
+  padding-inline: 0.45rem;
+  margin: 0;
+  border-block-end: 1px solid var(--rule);
+}
+
+.lectures li:last-child {
+  border-block-end: none;
+}
+
+.lectures li:nth-child(even) {
+  background: var(--fgv-blue-row);
+}
+
+.lectures .num {
+  font-weight: 600;
+  color: var(--slate);
+  font-variant-numeric: tabular-nums;
+  align-self: start;
+  padding-block-start: 0.12rem;
+}
+
+.lectures .item-body {
+  min-inline-size: 0;
+}
+
+.lectures .ttl {
+  font-weight: 500;
+  display: inline;
+}
+
+.lectures .hours {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--note-color);
+  background: #E9EEF3;
+  border-radius: 0.25rem;
+  padding: 0.08em 0.45em;
+  margin-inline-start: 0.4em;
+  vertical-align: baseline;
+}
+
+.lectures .desc {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--note-color);
+  margin-block-start: 0.15rem;
+  line-height: 1.4;
+}
+
+.lectures .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: flex-end;
+}
+
+/* Upcoming items: whole row greys out (matching Part I) */
+.lectures li:has(.soon) {
+  color: var(--muted);
+}
+
+.lectures li:has(.soon) .num {
+  color: var(--muted);
+}
+
+.lectures .soon {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Stack links below title on narrow containers / phones */
+@container item-list (inline-size < 34rem) {
+  .lectures li {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 0.45rem 0.65rem;
+  }
+
+  .lectures .links,
+  .lectures .soon {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .lectures li {
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 0.45rem 0.65rem;
+  }
+
+  .lectures .links,
+  .lectures .soon {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+/* ---------- Notes & expandable codebook ---------- */
+.pdfnote {
+  font-size: 0.88rem;
+  color: var(--note-color);
+  margin-block-start: 0.75rem;
+}
+
+.pdfnote p {
+  margin-block: 0.4rem;
+}
+
+.codebook {
+  margin-block-start: 0.9rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.35rem;
+  background: var(--bg);
+  font-size: 0.88rem;
+}
+
+.codebook summary {
+  cursor: pointer;
+  padding-block: 0.55rem;
+  padding-inline: 0.85rem;
+  font-weight: 600;
+  color: var(--slate);
+  background: var(--fill);
+  border-radius: 0.3rem;
+}
+
+.codebook[open] summary {
+  border-block-end: 1px solid var(--rule);
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.codebook-content {
+  padding-block: 0.75rem;
+  padding-inline: 0.85rem;
+  overflow-x: auto;
+}
+
+.codebook-content p {
+  margin-block: 0 0.65rem;
+  color: var(--note-color);
+}
+
+.codebook table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.codebook caption {
+  text-align: start;
+  font-weight: 600;
+  color: var(--slate);
+  margin-block-end: 0.4rem;
+}
+
+.codebook th,
+.codebook td {
+  text-align: start;
+  padding-block: 0.38rem;
+  padding-inline: 0.55rem;
+  border-block-end: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.codebook thead th {
+  color: var(--slate);
+  font-weight: 600;
+  border-block-end: 1.5px solid var(--slate);
+  background: var(--fgv-blue-row);
+}
+
+.codebook tbody tr:last-child td {
+  border-block-end: none;
+}
+
+/* ---------- References list ---------- */
+.refs-list {
+  font-size: 0.9rem;
+  color: var(--body-color);
+  padding-inline-start: 1.25rem;
+  margin-block: 0.5rem 0;
+}
+
+.refs-list li {
+  margin-block-end: 0.35rem;
+}
+
+/* ---------- Footer ---------- */
+.footer-note {
+  font-size: 0.82rem;
+  color: var(--note-color);
+  border-block-start: 1px solid var(--rule);
+  margin-block: 2.5rem 2rem;
+  padding-block-start: 0.7rem;
+}
+
+.footer-note p {
+  margin: 0;
+}

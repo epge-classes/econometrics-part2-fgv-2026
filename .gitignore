@@ -1,0 +1,25 @@
+# Build / staging
+_site/
+
+# OS & sync artifacts
+.DS_Store
+Thumbs.db
+*conflicted copy*
+
+# LaTeX build files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# R / Stata temporary files
+.Rhistory
+.RData
+.Rproj.user/
