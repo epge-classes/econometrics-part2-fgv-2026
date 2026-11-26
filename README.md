@@ -4,9 +4,10 @@ Repository for the second half of Econometrics I (*Econometrics and Causal Infer
 
 <table>
   <tr><td><b>Instructor</b></td><td>Valdemar Rodrigues de Pinho Neto (<a href="mailto:valdemar.pinho@fgv.br">valdemar.pinho@fgv.br</a>)</td></tr>
-  <tr><td><b>Part I</b></td><td>Raul Guarini Riva (<a href="https://epge-classes.github.io/econometrics-fgv-2026/">Part I Website</a>)</td></tr>
+  <tr><td><b>Part I</b></td><td>Raul Guarini Riva (<a href="https://epge-classes.github.io/econometrics-fgv-2026/">epge-classes.github.io/econometrics-fgv-2026</a>)</td></tr>
   <tr><td><b>TA</b></td><td>Taric Latif (<a href="mailto:tariclatif@gmail.com">tariclatif@gmail.com</a>)</td></tr>
   <tr><td><b>Classes</b></td><td>Wednesdays and Fridays, 9:00–11:00 (20 hours · 10 sessions)</td></tr>
+  <tr><td><b>Website</b></td><td><a href="https://epge-classes.github.io/econometrics-part2-fgv-2026/">epge-classes.github.io/econometrics-part2-fgv-2026</a></td></tr>
   <tr><td><b>Syllabus</b></td><td><a href="syllabus/Syllabus_Econometrics_and_Causal_Inference_EPGE_2026.pdf">Syllabus (PDF)</a></td></tr>
   <tr><td><b>Lecture Notes</b></td><td><a href="notes/Econometrics_and_Causal_Inference.pdf">Econometrics and Causal Inference (PDF)</a></td></tr>
 </table>
@@ -38,6 +39,8 @@ By the end of the course, you should be able to:
 
 ## Materials
 
+Course materials, chapter links, and problem sets are available on the [course website](https://epge-classes.github.io/econometrics-part2-fgv-2026/).
+
 The primary reference is the course monograph, organized around the eight units above:
 
 - Pinho Neto, V. R. (2026). [*Econometrics and Causal Inference*](notes/Econometrics_and_Causal_Inference.pdf). Graduate Lecture Notes, FGV EPGE.
@@ -66,16 +69,6 @@ There are four consolidated problem sets (each covering two course chapters), po
 - **Problem Set 2** (*Instrumental Variables and Regression Discontinuity Designs* — Chapters 3–4): *coming soon*
 - **Problem Set 3** (*Difference-in-Differences and Event Studies* — Chapters 5–6): *coming soon*
 - **Problem Set 4** (*Synthetic Control, Diagnostics, and Research Design* — Chapters 7–8): *coming soon*
-
-## Publishing to GitHub Pages
-
-1. Push this repository to GitHub (e.g., under `epge-classes`).
-2. In **Settings → Pages**, set **Build and deployment → Source** to **GitHub Actions**.
-3. Pushing to `main` automatically deploys the course webpage via [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
-
-To release a new problem set:
-1. Place its PDF (and any dataset) in `problem_sets/PSN/`.
-2. In `index.html`, replace that row's `<span class="soon">coming soon</span>` with a `<span class="links">...</span>` block modeled on PS1/PS2.
 
 ## License
 
