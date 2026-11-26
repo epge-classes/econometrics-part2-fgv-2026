@@ -2,16 +2,13 @@
 
 Numbered references to tables, figures, equations, sections, and results in the problem sets refer to the [Lecture Notes](../notes/Econometrics_and_Causal_Inference.pdf).
 
-## Problem Set 1 — Potential Outcomes, Causal Estimands, and Identification
+## Problem Set 1 — Potential Outcomes, Randomized Experiments, and Selection on Observables (Chapters 1–2)
 
-- PDF: [`PS1/problem_set_01.pdf`](PS1/problem_set_01.pdf)
+- **Due date:** Wednesday, December 2, 2026 (deliver in class)
+- **PDF:** [`PS1/problem_set_01.pdf`](PS1/problem_set_01.pdf)
+- **Data:** [`PS1/job_training.csv`](PS1/job_training.csv)
 
-## Problem Set 2 — Randomized Experiments and Selection on Observables
-
-- PDF: [`PS2/problem_set_02.pdf`](PS2/problem_set_02.pdf)
-- Data: [`PS2/job_training.csv`](PS2/job_training.csv)
-
-### Codebook: `job_training.csv` (Problem Set 2, Problem 6)
+### Codebook: `job_training.csv` (Problem Set 1, Problem 10)
 
 2,935 workers: participants in a job-training program (`sample = program`), an experimental control group (`experimental_control`), and a comparison group from a national household survey (`survey`). Comma-separated with variable names in the first row.
 

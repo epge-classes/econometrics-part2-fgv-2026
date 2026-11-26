@@ -59,10 +59,13 @@ Complementary textbooks:
 
 ## Problem Sets
 
-Problem sets and empirical datasets are posted under [`problem_sets`](problem_sets):
+There are four consolidated problem sets (each covering two course chapters), posted under [`problem_sets`](problem_sets):
 
-- **Problem Set 1** (*Potential Outcomes, Causal Estimands, and Identification*): [PDF](problem_sets/PS1/problem_set_01.pdf)
-- **Problem Set 2** (*Randomized Experiments and Selection on Observables*): [PDF](problem_sets/PS2/problem_set_02.pdf) · [Data: `job_training.csv`](problem_sets/PS2/job_training.csv)
+- **Problem Set 1** (*Potential Outcomes, Randomized Experiments, and Selection on Observables* — Chapters 1–2): [PDF](problem_sets/PS1/problem_set_01.pdf) · [Data: `job_training.csv`](problem_sets/PS1/job_training.csv)  
+  *Due Wednesday, December 2, 2026 (deliver in class).*
+- **Problem Set 2** (*Instrumental Variables and Regression Discontinuity Designs* — Chapters 3–4): *coming soon*
+- **Problem Set 3** (*Difference-in-Differences and Event Studies* — Chapters 5–6): *coming soon*
+- **Problem Set 4** (*Synthetic Control, Diagnostics, and Research Design* — Chapters 7–8): *coming soon*
 
 ## Publishing to GitHub Pages
 
